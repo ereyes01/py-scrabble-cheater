@@ -78,7 +78,7 @@ In [7]: c.find("zxjvatema").contains("ma")
 Out[7]: [u'amaze', u'maze', u'max', u'maj', u'mate', u'mat', u'mae', u'ma']
 ```
 
-The to-scoring play "amaze" is intriguing. Turns out the "e" Lands on a
+The top-scoring play "amaze" is intriguing. Turns out the "e" Lands on a
 triple-word-score tile. How much is this play worth?
 
 ```
@@ -88,7 +88,7 @@ Out[8]: 48
 
 48 points!! Zing!!!
 
-Now I look so smart.
+Now, my frustrated opponent will think I'm a genius!!
 
 If you have a set of letters that can be formed into a larger set of words, you
 can chain constraints to further whittle down the possibilities:
