@@ -52,3 +52,12 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# pyenv local version
+.python-version
+
+# vim swp files
+.*.sw[a-z]
+
+# my local scrabble dictionary
+dict
