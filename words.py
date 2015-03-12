@@ -14,7 +14,8 @@ def word_score(word):
     return sum(scores[char] for char in word)
 
 
-def _word_find_comparator(word, letter_count):
+def _word_find_comparator(word, letters):
+    letter_count = Counter(letters)
     word_count = Counter(word)
 
     for letter in word_count:
@@ -43,6 +44,7 @@ class ScrabbleCheater:
 
     def __search(self, search, comparator):
         found = set()
+        search = search.lower()
 
         for word in self.words:
             if comparator(word, search):
@@ -51,7 +53,7 @@ class ScrabbleCheater:
         return sorted(found, key=word_score, reverse=True)
 
     def find(self, letters):
-        found_words = self.__search(Counter(letters), _word_find_comparator)
+        found_words = self.__search(letters, _word_find_comparator)
 
         return ScrabbleCheater(words=found_words)
 

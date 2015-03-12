@@ -38,6 +38,7 @@ def mock_cheater(fake_dictionary):
 
 @pytest.fixture(params=[(("bbb"), []),
                         (("aaaa"), ["aaa"]),
+                        (("AAAA"), ["aaa"]),
                         (("aaaabbbbbbb"), ["aaabbb", "aaa"])
                        ])
 def find_inputs(request):
